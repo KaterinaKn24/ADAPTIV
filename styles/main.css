@@ -1,0 +1,78 @@
+.container {
+	max-width: 960px;
+	background-color: #000000;
+	margin: 0 auto;
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 45px 135px auto;
+	grid-template-areas:
+	"header header header"
+	"menu ffe-2023 dom"
+	"menu chat foto"
+	"menu foto2 foto";
+}
+.header {
+	border: 1px solid #b3b3b3;
+	box-sizing: border-box;
+	background-color:#1a1a1a;
+	grid-area:header;
+	color: #cccccc;
+}
+.menu {
+	padding-left: 15px;
+	background-color: #1a1a1a;
+	grid-area: menu;
+}
+.ffe-2023 {
+	background-color:#262626;
+	color: white;
+	padding-top: 15px;
+	padding-left: 10px;
+	grid-area: ffe-2023;
+}
+.dom {
+	background-color:#4d4d4d;
+	color: white;
+	padding-top: 20px;
+	grid-area: dom;
+}
+.chat {
+	padding: 10px;
+	background-color:#262626;
+	color: white;
+	grid-area: chat;
+}
+.foto {
+	box-sizing: border-box;
+	background-color:#4d4d4d;
+	color: white;
+	text-align: center;
+	grid-area: foto;
+}
+.foto2 {
+	background-color:#262626;
+	color: white;
+	font-size: 16px;
+	padding-top: 30px;
+	grid-area: foto2;
+
+}
+@media only screen and (max-width: 700px) {
+	.container {
+		grid-template-areas:
+		"header"
+		"menu"
+		"ffe-2023"
+		"chat"
+		"dom"
+		"foto"
+		"foto2";
+		grid-template-columns: 6fr 6fr; 
+		grid-template-rows: 45px auto 135px auto;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.container {
+		grid-template-columns: 12fr;
+	}
+}
